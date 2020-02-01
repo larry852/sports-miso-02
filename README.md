@@ -10,3 +10,13 @@ pip install -r requirements.txt
 
 python manage.py runserver
 ```
+python manage.py startapp polls
+
+## Run
+```sh
+cd sports-miso-02
+source env/bin/activate
+pip install -r requirements.txt
+python manage.py migrate
+python manage.py runserver
+```
