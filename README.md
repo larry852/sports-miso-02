@@ -18,11 +18,13 @@ python manage.py migrate
 python manage.py runserver
 ```
 
-## ???
+## Create a new module
 
 ```sh
-python manage.py startapp polls
+python manage.py startapp xxx
 ```
+
+Replace the "xxx" value for the module name.
 
 ## How to know which components my app have ?
 
@@ -37,25 +39,17 @@ Remember:
 1. Create an empty "sports" database if you are using postgres.
 2. Follow [this link](https://stackoverflow.com/a/47845784) if you have troubles with PostgreSQL connection.
 
-### Connections
+### Set up the default database
 
-* "default" --> Connect to local SQLite3 database
-* "postgres" --> Connect to postgres database
-* "heroku" --> Connect to postgres database in Heroku
+Set this environment variable in your local:
 
-Examples:
-
-*To run migrations in local SQLite3 database*
 ```sh
-python manage.py migrate
+export DJANGO_DATABASE="xxx"
 ```
 
-*To run migrations in local postgres database*
-```sh
-python manage.py migrate --database=postgres
-```
+Replace the "xxx" value for:
 
-*To run migration in Heroku postgres database*
-```sh
-python manage.py migrate --database=heroku
-```
+* "postgres" --> Connect to local postgres database.
+* "heroku" --> Connect to postgres database in Heroku.
+
+If you don't set the "DJANGO_DATABASE", the "default" database is going to be the local SQLite3 database.
