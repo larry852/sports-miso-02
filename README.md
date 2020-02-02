@@ -1,14 +1,27 @@
 # sports-miso-02
 
-## Initial configuration
+## Requirements
+
+```sh
+sudo apt install python3
+sudo apt install python-pip
+sudo pip install virtualenv
+sudo apt install python3-dev
+sudo apt install libpq-dev
+```
+
+## Run first time
 
 ```sh
 git clone https://github.com/larry852/sports-miso-02
 cd sports-miso-02
 virtualenv -p python3 env
+source env/bin/activate
+pip install -r requirements.txt
+python manage.py runserver
 ```
 
-## Run
+## Update migrations, packages and run
 
 ```sh
 cd sports-miso-02
@@ -18,7 +31,7 @@ python manage.py migrate
 python manage.py runserver
 ```
 
-## Create a new module
+## Create apps
 
 ```sh
 python manage.py startapp xxx
