@@ -16,4 +16,4 @@ class Athlete (models.Model):
     birth_date = models.DateField(null=True, blank=True)
     birth_place = models.CharField(max_length=40, null=True, blank=False)
     picture = models.ImageField(upload_to=get_path_class, default='default-profile.png')
-    trainer_id = models.ForeignKey(Trainer, on_delete=models.CASCADE)
+    trainer = models.ForeignKey(Trainer, on_delete=models.CASCADE)

@@ -17,5 +17,5 @@ class Participation(models.Model):
 class Commentary(models.Model):
     comment = models.CharField(max_length=200, null=False, blank=False)
     datetime = models.DateField(null=False)
-    participation_id = models.ForeignKey('Participation', on_delete = models.CASCADE)
+    participation = models.ForeignKey('Participation', on_delete = models.CASCADE)
     user = models.ForeignKey(User, on_delete = models.CASCADE)
