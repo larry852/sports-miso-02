@@ -91,10 +91,10 @@ DATABASES = {
     },
     'heroku': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'sports',
-        'USER': '',
-        'PASSWORD': '',
-        'HOST': '',
+        'NAME': 'dd0e9ujrgpbmdn',
+        'USER': 'gmjnnujtftyeqx',
+        'PASSWORD': '3b0e6e7694e79e567e2908086ec0412a67d44adcf7951f322e96616e5fcb5150',
+        'HOST': 'ec2-23-21-13-88.compute-1.amazonaws.com',
         'PORT': '5432',
     }
 }
