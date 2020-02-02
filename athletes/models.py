@@ -1,8 +1,6 @@
 from django.db import models
 from core.utils.file import get_path_class
 
-# Create your models here.
-
 
 class Trainer (models.Model):
     first_name = models.CharField(max_length=40, null=False, blank=False)
@@ -10,7 +8,7 @@ class Trainer (models.Model):
 
 
 class Athlete (models.Model):
-    first_name = models.CharField(max_length=40,null=False, blank=False)
+    first_name = models.CharField(max_length=40, null=False, blank=False)
     last_name = models.CharField(max_length=40, null=True, blank=False)
     height = models.FloatField()
     birth_date = models.DateField(null=True, blank=True)
