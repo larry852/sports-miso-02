@@ -9,7 +9,7 @@ User = get_user_model()
 # Create your models here.
 class Participation(models.Model):
     datetime = models.DateField(null=False)
-    youtube_id = models.URLField(max_length=200, null=False)
+    youtube_id = models.CharField(max_length=200, null=False)
     result = models.IntegerField(validators=[MinValueValidator(0), MaxValueValidator(5)], null=False)
     athlete =  models.ForeignKey('athletes.Athlete', on_delete = models.CASCADE)
 #TODO: falta modality_id
