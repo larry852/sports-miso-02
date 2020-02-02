@@ -25,7 +25,7 @@ SECRET_KEY = '8*cr4r_db-j7$w(*)^wo5c9u(s92yh5io-v-^&7s%f+0m)zc#)'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'athletes',
     'rest_framework',
+    'participations',
 ]
 
 MIDDLEWARE = [
@@ -114,6 +115,7 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
+
 
 
 # Static files (CSS, JavaScript, Images)
