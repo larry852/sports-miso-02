@@ -11,7 +11,7 @@ class Participation(models.Model):
     datetime = models.DateField(null=False)
     youtube_id = models.URLField(max_length=200, null=False)
     result = models.IntegerField(validators=[MinValueValidator(0), MaxValueValidator(5)], null=False)
-    athlete_id =  models.ForeignKey('athletes.Athlete', on_delete = models.CASCADE)
+    athlete =  models.ForeignKey('athletes.Athlete', on_delete = models.CASCADE)
 #TODO: falta modality_id
 
 class Commentary(models.Model):
