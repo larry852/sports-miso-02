@@ -1,4 +1,5 @@
 from django.db import models
+from core.utils.file import get_path_class
 
 # Create your models here.
 

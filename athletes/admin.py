@@ -6,4 +6,8 @@ from .models import *
 class AdminCity(admin.ModelAdmin):
     list_display = ('id', 'first_name', 'last_name')
 
-admin.site.register(Athlete)
+@admin.register(Athlete)
+class AdminCity(admin.ModelAdmin):
+    list_display = ('id', 'first_name', 'last_name', 'birth_place')
+
+
