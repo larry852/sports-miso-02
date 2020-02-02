@@ -14,5 +14,5 @@ class Athlete (models.Model):
     height = models.FloatField()
     birth_date = models.DateField(null=True, blank=True)
     birth_place = models.CharField(max_length=40, null=True, blank=False)
-    picture_url = models.ImageField(upload_to='media', null=True)
+    picture = models.ImageField(upload_to=get_path_class, default='default-profile.png')
     trainer_id = models.ForeignKey(Trainer, on_delete=models.CASCADE)
