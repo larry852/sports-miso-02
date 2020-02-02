@@ -1,8 +1,6 @@
 # sports-miso-02
 
-## 
-
-### Requirements
+## Requirements
 ```sh
 sudo apt install python3
 sudo apt install python-pip
@@ -11,7 +9,7 @@ sudo apt install python3-dev
 sudo apt install libpq-dev
 ```
 
-## Run fisrt time
+## Run first time
 ```sh
 git clone https://github.com/larry852/sports-miso-02
 cd sports-miso-02
