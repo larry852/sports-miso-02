@@ -1,5 +1,8 @@
 # sports-miso-02
 
+## ERD
+![ERD](doc/ERD.png?raw=true "ERD")
+
 ## Requirements
 
 ```sh
