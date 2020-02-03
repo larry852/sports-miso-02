@@ -9,4 +9,4 @@ class AdminParticipation(admin.ModelAdmin):
 
 @admin.register(Commentary)
 class AdminCommentary(admin.ModelAdmin):
-    list_display = ('id', 'comment', 'datetime')
+    list_display = ('id', 'comment', 'datetime', 'user')
