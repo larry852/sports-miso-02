@@ -9,4 +9,4 @@ class AdminTrainer(admin.ModelAdmin):
 
 @admin.register(Athlete)
 class AdminAthlete(admin.ModelAdmin):
-    list_display = ('id', 'first_name', 'last_name', 'birth_place')
+    list_display = ('id', 'first_name', 'last_name', 'birth_place', 'picture')
