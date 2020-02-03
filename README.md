@@ -1,5 +1,8 @@
 # sports-miso-02
 
+## Deployment
+- [Admin](https://sports-miso-02.herokuapp.com/)
+
 ## ERD
 ![ERD](doc/ERD.png?raw=true "ERD")
 
