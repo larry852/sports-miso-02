@@ -1,4 +1,4 @@
-# sports-miso-02
+# Colombia en Tokio 2020
 
 ## Deployment
 - [Admin](https://sports-miso-02.herokuapp.com/)
