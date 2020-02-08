@@ -3,8 +3,10 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf.urls.static import static
 from rest_framework import routers
+from athletes.urls import router as athletes_router
 
 router = routers.DefaultRouter()
+router.registry.extend(athletes_router.registry)
 
 urlpatterns = [
     path('', admin.site.urls),
