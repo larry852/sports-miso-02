@@ -9,28 +9,28 @@
 ## API Endpoints
 
 ### General
-| Endpoint | Parameters | Method | Response | Description | Token |
-| --- | --- | --- | --- | --- | --- | 
-| / |  | GET |  | Admin Django - WEB | <ul><li>[ ] </li></ul> |
-| /api/v1/ |  | GET | <ul><li>CRUDs</li></ul> | Api root | <ul><li>[x] </li></ul> |
+| Endpoint | Description | Token |
+| --- | --- | --- | 
+| / | Admin Django - WEB | <ul><li>[ ] </li></ul> |
+| /api/v1/ | Api root | <ul><li>[x] </li></ul> |
 
 ### Auth
-| Endpoint | Parameters | Method | Response | Description | Token |
-| --- | --- | --- | --- | --- | --- | 
-| /api/v1/registration/ | <ul><li>user</li><li>organization id</li><li>role short name</li><li>phone number</li><li>place id</li></ul> | POST | <ul><li>key</li><li>user</li></ul> | Registration | <ul><li>[ ] </li></ul>
-| /api/v1/registration/verify-email/ | <ul><li>key</li></ul> | POST | <ul><li>detail</li></ul> | Verify email | <ul><li>[ ] </li></ul> |
-| /api/v1/login/ | <ul><li>email or username</li><li>password</li></ul> | POST | <ul><li>key</li><li>user</li></ul> | Login | <ul><li>[ ] </li></ul> |
-| /api/v1/logout/ |  | POST | <ul><li>detail</li></ul> | Logout | <ul><li>[ ] </li></ul> |
-| /api/v1/password/change/ | <ul><li>new_password1</li><li>new_password2</li><li>old_password</li></ul> | POST | <ul><li>detail</li></ul> | Change password | <ul><li>[x] </li></ul> |
-| /api/v1/password/reset/ | <ul><li>email</li></ul> | POST | <ul><li>detail</li></ul> | Forgot password - send url -> /reset/uid/token/ | <ul><li>[ ] </li></ul> |
-| /api/v1/password/reset/confirm/ | <ul><li>uid</li><li>token</li><li>new_password1</li><li>new_password2</li></ul> | POST | <ul><li>detail</li></ul> | Forgot password confirmation | <ul><li>[ ] </li></ul> |
+| Endpoint | Description | Token |
+| --- | --- | --- | 
+| /api/v1/registration/ | Registration | <ul><li>[ ] </li></ul>
+| /api/v1/registration/verify-email/ | Verify email | <ul><li>[ ] </li></ul> |
+| /api/v1/login/  | Login | <ul><li>[ ] </li></ul> |
+| /api/v1/logout/ | Logout | <ul><li>[ ] </li></ul> |
+| /api/v1/password/change/ | Change password | <ul><li>[x] </li></ul> |
+| /api/v1/password/reset/ | Forgot password - send url -> /reset/uid/token/ | <ul><li>[ ] </li></ul> |
+| /api/v1/password/reset/confirm/ | Forgot password confirmation | <ul><li>[ ] </li></ul> |
 
 ### Current user
 | Endpoint | Parameters | Method | Response | Description | Token |
 | --- | --- | --- | --- | --- | --- | 
-| /api/v1/user/ |  | GET | <ul><li>user</li></ul> | Get current user | <ul><li>[x] </li></ul> |
-| /api/v1/user/ | <ul><li>user</li></ul> | PUT | <ul><li>user</li></ul> | Total update of current user | <ul><li>[x] </li></ul> |
-| /api/v1/user/ | <ul><li>partial user</li></ul> | PATCH | <ul><li>user</li></ul> | Partial update of current user | <ul><li>[x] </li></ul> |
+| /api/v1/user/ | Get current user | <ul><li>[x] </li></ul> |
+| /api/v1/user/ | Total update of current user | <ul><li>[x] </li></ul> |
+| /api/v1/user/ | Partial update of current user | <ul><li>[x] </li></ul> |
 
 
 ## Requirements
