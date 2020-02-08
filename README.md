@@ -25,8 +25,8 @@
 | /api/v1/password/reset/confirm/ | Forgot password confirmation | <ul><li>[ ] </li></ul> |
 
 ### Current user
-| Endpoint | Parameters | Method | Response | Description | Token |
-| --- | --- | --- | --- | --- | --- | 
+| Endpoint | Description | Token |
+| --- | --- | --- | 
 | /api/v1/user/ | Get current user | <ul><li>[x] </li></ul> |
 | /api/v1/user/ | Total update of current user | <ul><li>[x] </li></ul> |
 | /api/v1/user/ | Partial update of current user | <ul><li>[x] </li></ul> |
