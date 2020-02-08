@@ -39,6 +39,12 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
+    'rest_framework.authtoken',
+    'rest_auth',
+    'django.contrib.sites',
+    'allauth',
+    'allauth.account',
+    'rest_auth.registration',
     'corsheaders',
     'athletes',
     'participations',
@@ -160,3 +166,5 @@ STATICFILES_DIRS = (
 
 # Setup CORS
 CORS_ORIGIN_ALLOW_ALL = True
+
+SITE_ID = 1
