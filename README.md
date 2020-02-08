@@ -18,7 +18,6 @@
 | Endpoint | Description | Token |
 | --- | --- | --- | 
 | /api/v1/registration/ | Registration | <ul><li>[ ] </li></ul>
-| /api/v1/registration/verify-email/ | Verify email | <ul><li>[ ] </li></ul> |
 | /api/v1/login/  | Login | <ul><li>[ ] </li></ul> |
 | /api/v1/logout/ | Logout | <ul><li>[ ] </li></ul> |
 | /api/v1/password/change/ | Change password | <ul><li>[x] </li></ul> |
