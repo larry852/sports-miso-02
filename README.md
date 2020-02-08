@@ -6,6 +6,32 @@
 ## ERD
 ![ERD](doc/ERD.png?raw=true "ERD")
 
+## API Endpoints
+
+### General
+| Endpoint | Description | Token |
+| --- | --- | --- | 
+| / | Admin Django - WEB | <ul><li>[ ] </li></ul> |
+| /api/v1/ | Api root | <ul><li>[x] </li></ul> |
+
+### Auth
+| Endpoint | Description | Token |
+| --- | --- | --- | 
+| /api/v1/registration/ | Registration | <ul><li>[ ] </li></ul>
+| /api/v1/login/  | Login | <ul><li>[ ] </li></ul> |
+| /api/v1/logout/ | Logout | <ul><li>[ ] </li></ul> |
+| /api/v1/password/change/ | Change password | <ul><li>[x] </li></ul> |
+| /api/v1/password/reset/ | Forgot password - send url -> /reset/uid/token/ | <ul><li>[ ] </li></ul> |
+| /api/v1/password/reset/confirm/ | Forgot password confirmation | <ul><li>[ ] </li></ul> |
+
+### Current user
+| Endpoint | Description | Token |
+| --- | --- | --- | 
+| /api/v1/user/ | Get current user | <ul><li>[x] </li></ul> |
+| /api/v1/user/ | Total update of current user | <ul><li>[x] </li></ul> |
+| /api/v1/user/ | Partial update of current user | <ul><li>[x] </li></ul> |
+
+
 ## Requirements
 
 ```sh
