@@ -166,7 +166,7 @@ AWS_DEFAULT_ACL = None
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
 ]
-STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+STATICFILES_STORAGE = environ.get('STATICFILES_STORAGE', 'django.contrib.staticfiles.storage.StaticFilesStorage')
 
 DEFAULT_FILE_STORAGE = environ.get('DEFAULT_FILE_STORAGE', 'django.files.storage.FileSystemStorage')
 
