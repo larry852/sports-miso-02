@@ -1,7 +1,10 @@
-# Colombia en Tokio 2020
+# Colombia en Tokio 2020 - Backend
+
+* Application built in Python using DJango.
+* Configured to be depoyed in Heroku.
 
 ## Deployment
-- [Admin](https://sports-miso-02.herokuapp.com/)
+[Admin](https://sports-miso-02.herokuapp.com/)
 
 ## ERD
 ![ERD](doc/ERD.png?raw=true "ERD")
@@ -30,7 +33,6 @@
 | /api/v1/user/ | Get current user | <ul><li>[x] </li></ul> |
 | /api/v1/user/ | Total update of current user | <ul><li>[x] </li></ul> |
 | /api/v1/user/ | Partial update of current user | <ul><li>[x] </li></ul> |
-
 
 ## Requirements
 
