@@ -13,6 +13,6 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='athlete',
             name='birth_place',
-            field=models.CharField(choices=[('001', 'Bogotá'), ('002', 'Pasto'), ('003', 'Tunja'), ('004', 'Barranquilla'), ('005', 'Medellín'), ('007', 'Cartagena'), ('008', 'Manizales'), ('009', 'Yopal')], default='', max_length=3),
+            field=models.CharField(choices=[('001', 'Bogotá'), ('002', 'Pasto'), ('003', 'Tunja'), ('004', 'Barranquilla'), ('005', 'Medellín'), ('007', 'Cartagena'), ('008', 'Manizales'), ('009', 'Yopal')], default='', max_length=100),
         ),
     ]
