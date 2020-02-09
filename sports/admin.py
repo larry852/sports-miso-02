@@ -13,4 +13,4 @@ class AdminSport(admin.ModelAdmin):
     list_display = ('id', 'name', 'image')
 
     def image(self, obj):
-        return mark_safe('<image height="25" width="25" src="{}" />'.format(obj.picture.url))
+        return mark_safe('<image height="25" width="25" src="{}" />'.format(obj.icon.url))
