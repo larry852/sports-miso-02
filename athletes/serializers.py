@@ -1,6 +1,5 @@
 from rest_framework import serializers
 from .models import Athlete, Trainer
-from participations.models import Participation
 from sports.models import Sport
 from sports.serializers import SportSerializer
 
