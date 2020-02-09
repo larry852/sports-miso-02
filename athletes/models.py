@@ -20,7 +20,7 @@ class Athlete (models.Model):
     height = models.FloatField()
     weight = models.FloatField()
     birth_date = models.DateField(null=True, blank=True)
-    birth_place = models.CharField(max_length=3, choices=CITY_CHOICES, default='')
+    birth_place = models.CharField(max_length=100, choices=CITY_CHOICES, default='')
     picture = models.ImageField(upload_to=get_path_class, default='default-profile.png')
     trainer = models.ForeignKey(Trainer, on_delete=models.CASCADE)
 
