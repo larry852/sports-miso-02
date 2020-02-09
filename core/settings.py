@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'athletes',
     'participations',
     'sports',
+    'storages',
 ]
 
 MIDDLEWARE = [
@@ -152,6 +153,22 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # ---------------------- Heroku -------------------------------
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+AWS_ACCESS_KEY_ID = environ.get('AWS_ACCESS_KEY_ID', '')
+AWS_SECRET_ACCESS_KEY = environ.get('AWS_SECRET_ACCESS_KEY', '')
+AWS_STORAGE_BUCKET_NAME = 'django-procesos-static'
+AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
+AWS_S3_OBJECT_PARAMETERS = {
+    'CacheControl': 'max-age=86400',
+}
+AWS_LOCATION = 'static'
+AWS_DEFAULT_ACL = None
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static'),
+]
+STATICFILES_STORAGE = environ.get('STATICFILES_STORAGE', 'django.contrib.staticfiles.storage.StaticFilesStorage')
+
+DEFAULT_FILE_STORAGE = environ.get('DEFAULT_FILE_STORAGE', 'django.core.files.storage.FileSystemStorage')
 
 # Extra places for collectstatic to find static files.
 STATICFILES_DIRS = (
