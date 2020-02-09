@@ -168,7 +168,7 @@ STATICFILES_DIRS = [
 ]
 STATICFILES_STORAGE = environ.get('STATICFILES_STORAGE', 'django.contrib.staticfiles.storage.StaticFilesStorage')
 
-DEFAULT_FILE_STORAGE = environ.get('DEFAULT_FILE_STORAGE', 'django.files.storage.FileSystemStorage')
+DEFAULT_FILE_STORAGE = environ.get('DEFAULT_FILE_STORAGE', 'django.core.files.storage.FileSystemStorage')
 
 # Extra places for collectstatic to find static files.
 STATICFILES_DIRS = (
