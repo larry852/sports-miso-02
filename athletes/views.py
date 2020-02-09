@@ -1,7 +1,6 @@
 from rest_framework import viewsets
-
-from athletes.models import Athlete
-from athletes.serializers import AthleteSerializer
+from .models import Athlete
+from .serializers import AthleteSerializer
 
 
 class AthleteViewSet(viewsets.ModelViewSet):

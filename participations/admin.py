@@ -4,7 +4,7 @@ from .models import Participation, Commentary
 
 @admin.register(Participation)
 class AdminParticipation(admin.ModelAdmin):
-    list_display = ('id', 'datetime', 'youtube_id', 'result')
+    list_display = ('id', 'datetime', 'youtube_id', 'result', 'modality', 'athlete')
 
 
 @admin.register(Commentary)
