@@ -154,8 +154,8 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
-AWS_ACCESS_KEY_ID = environ.get('AWS_ACCESS_KEY_ID', '')  #'AKIAW3BYHNS2VOSUYLKW'
-AWS_SECRET_ACCESS_KEY = environ.get('AWS_SECRET_ACCESS_KEY', '')  # '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'
+AWS_ACCESS_KEY_ID = environ.get('AWS_ACCESS_KEY_ID', '')
+AWS_SECRET_ACCESS_KEY = environ.get('AWS_SECRET_ACCESS_KEY', '')
 AWS_STORAGE_BUCKET_NAME = 'django-procesos-static'
 AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
 AWS_S3_OBJECT_PARAMETERS = {
