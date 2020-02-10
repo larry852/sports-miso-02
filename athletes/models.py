@@ -1,5 +1,6 @@
 from django.db import models
 from core.utils.file import get_path_class
+from .choices import CITY_CHOICES
 
 
 class Trainer (models.Model):
@@ -19,7 +20,7 @@ class Athlete (models.Model):
     height = models.FloatField()
     weight = models.FloatField()
     birth_date = models.DateField(null=True, blank=True)
-    birth_place = models.CharField(max_length=40, null=True, blank=False)
+    birth_place = models.CharField(max_length=100, choices=CITY_CHOICES, default='')
     picture = models.ImageField(upload_to=get_path_class, default='default-profile.png')
     trainer = models.ForeignKey(Trainer, on_delete=models.CASCADE)
 
