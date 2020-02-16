@@ -2,6 +2,8 @@ from rest_framework import serializers
 from .models import Athlete, Trainer
 from sports.models import Sport
 from sports.serializers import SportSerializer
+from participations.models import Participation
+from participations.serializers import ParticipationSerializer
 
 
 class TrainerSerializer(serializers.ModelSerializer):
@@ -22,4 +24,13 @@ class AthleteSerializer(serializers.ModelSerializer):
     def get_sports(self, athlete):
         sports = Sport.objects.filter(modality__participation__athlete=athlete).distinct().all()
         serializer = SportSerializer(sports, many=True, context={"request": self.context.get('request')})
+        return serializer.data
+
+
+class DetailAthleteSerializer(AthleteSerializer):
+    participations = serializers.SerializerMethodField()
+
+    def get_participations(self, athlete):
+        participations = Participation.objects.filter(athlete=athlete).all()
+        serializer = ParticipationSerializer(participations, many=True, context={"request": self.context.get('request')})
         return serializer.data
