@@ -1,9 +1,8 @@
-from django.db import models
-from django.core.validators import MaxValueValidator, MinValueValidator
-from athletes.models import Athlete
-from core.utils.file import get_path_class
-from core.utils.datetime import datetime_format
 from django.contrib.auth import get_user_model
+from django.core.validators import MaxValueValidator, MinValueValidator
+from django.db import models
+
+from core.utils.datetime import datetime_format
 
 User = get_user_model()
 

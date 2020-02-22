@@ -1,11 +1,14 @@
-from .models import Participation,Commentary
 from rest_framework import serializers
+
 from sports.serializers import ModalitySerializer
+from .models import Participation, Commentary
+
 
 class CommentarySerializer(serializers.ModelSerializer):
     class Meta:
         model = Commentary
         fields = ('__all__')
+
 
 class ParticipationSerializer(serializers.ModelSerializer):
     modality = ModalitySerializer(read_only=True)
