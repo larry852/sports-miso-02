@@ -1,6 +1,7 @@
 from rest_framework import viewsets
 from .models import Athlete
 from .serializers import AthleteSerializer, DetailAthleteSerializer
+from .paginations import AthletePagination
 
 
 class AthleteViewSet(viewsets.ModelViewSet):
@@ -9,6 +10,7 @@ class AthleteViewSet(viewsets.ModelViewSet):
     detail_serializer_class = DetailAthleteSerializer
     http_method_names = ['get']
     filter_fields = ['participation__modality__sport', 'participation__modality']
+    pagination_class = AthletePagination
 
     def get_serializer_class(self):
         if self.action == 'retrieve':
