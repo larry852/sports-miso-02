@@ -8,6 +8,7 @@ class AthleteViewSet(viewsets.ModelViewSet):
     serializer_class = AthleteSerializer
     detail_serializer_class = DetailAthleteSerializer
     http_method_names = ['get']
+    filter_fields = ['participation__modality__sport', 'participation__modality']
 
     def get_serializer_class(self):
         if self.action == 'retrieve':
