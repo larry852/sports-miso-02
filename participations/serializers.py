@@ -8,6 +8,7 @@ class CommentarySerializer(serializers.ModelSerializer):
     class Meta:
         model = Commentary
         fields = ('__all__')
+        read_only_fields = ['datetime']
 
 
 class ParticipationSerializer(serializers.ModelSerializer):
