@@ -28,9 +28,4 @@ class AthleteSerializer(serializers.ModelSerializer):
 
 
 class DetailAthleteSerializer(AthleteSerializer):
-    participations = serializers.SerializerMethodField()
-
-    def get_participations(self, athlete):
-        participations = Participation.objects.filter(athlete=athlete).all()
-        serializer = ParticipationSerializer(participations, many=True, context={"request": self.context.get('request')})
-        return serializer.data
+    participations = ParticipationSerializer(read_only=True, many=True, source='participation_set')
