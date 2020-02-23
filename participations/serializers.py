@@ -13,13 +13,13 @@ class CommentarySerializer(serializers.ModelSerializer):
 
 class ParticipationSerializer(serializers.ModelSerializer):
     modality = ModalitySerializer(read_only=True)
-    comentaries = serializers.SerializerMethodField()
+    commentaries = serializers.SerializerMethodField()
 
     class Meta:
         model = Participation
         exclude = ['athlete']
 
-    def get_comentaries(self, participation):
+    def get_commentaries(self, participation):
         sports = Commentary.objects.filter(participation=participation).distinct().all()
         serializer = CommentarySerializer(sports, many=True, context={"request": self.context.get('request')})
         return serializer.data
