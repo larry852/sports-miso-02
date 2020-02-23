@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     'participations',
     'sports',
     'storages',
+    'django_filters',
 ]
 
 MIDDLEWARE = [
@@ -183,8 +184,6 @@ CORS_ORIGIN_ALLOW_ALL = True
 SITE_ID = 1
 
 REST_FRAMEWORK = {
-    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
-    'PAGE_SIZE': 6,
     'DEFAULT_PERMISSION_CLASSES': [
         'rest_framework.permissions.IsAuthenticated',
     ],
@@ -198,3 +197,5 @@ REST_AUTH_REGISTER_SERIALIZERS = {
 }
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+REST_FRAMEWORK['DEFAULT_FILTER_BACKENDS'] = ('django_filters.rest_framework.DjangoFilterBackend',)
