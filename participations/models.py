@@ -25,7 +25,7 @@ class Commentary(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
 
     class Meta:
-        ordering = ['-datetime']
+        ordering = ['datetime']
 
     def __str__(self):
         return '{} - {}... ({})'.format(self.id, self.comment[:5], self.user.username)
