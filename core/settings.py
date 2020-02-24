@@ -199,3 +199,7 @@ REST_AUTH_REGISTER_SERIALIZERS = {
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 REST_FRAMEWORK['DEFAULT_FILTER_BACKENDS'] = ('django_filters.rest_framework.DjangoFilterBackend',)
+
+REST_AUTH_SERIALIZERS = {
+    'TOKEN_SERIALIZER': 'users.serializers.CustomTokenSerializer',
+}
