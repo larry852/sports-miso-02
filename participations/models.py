@@ -24,5 +24,8 @@ class Commentary(models.Model):
     participation = models.ForeignKey('Participation', on_delete=models.CASCADE)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
 
+    class Meta:
+        ordering = ['-datetime']
+
     def __str__(self):
         return '{} - {}... ({})'.format(self.id, self.comment[:5], self.user.username)
