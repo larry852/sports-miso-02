@@ -5,7 +5,7 @@ from .paginations import AthletePagination
 
 
 class AthleteViewSet(viewsets.ModelViewSet):
-    queryset = Athlete.objects.all().order_by('id')
+    queryset = Athlete.objects.all().distinct().order_by('id')
     serializer_class = AthleteSerializer
     detail_serializer_class = DetailAthleteSerializer
     http_method_names = ['get']
