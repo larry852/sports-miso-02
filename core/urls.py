@@ -1,12 +1,17 @@
 from django.conf import settings
+from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import path, include
-from django.conf.urls.static import static
 from rest_framework import routers
+
 from athletes.urls import router as athletes_router
+from participations.urls import router as participations_router
+from sports.urls import router as sports_router
 
 router = routers.DefaultRouter()
 router.registry.extend(athletes_router.registry)
+router.registry.extend(sports_router.registry)
+router.registry.extend(participations_router.registry)
 
 urlpatterns = [
     path('', admin.site.urls),
